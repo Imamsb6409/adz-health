@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdzHealth</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./assets/logo-3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./sass/style.css" />
+  </head>
+  <body onload="waitingTime()">
+    <header>
+      <div id="logo">
+        <h1>Adz<span>Health</span></h1>
+      </div>
+      <nav class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="active">Home</a>
+        <a href="./html/dataObat.html">Data Obat</a>
+        <a href="./html/perizinan.html">Perizinan</a>
+        <a href="#help">Help</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <img
+          src="./assets/logo_baru_1-removebg-preview.png"
+          alt=""
+        />
+        <div class="button">
+          <button class="buttonObat buttonWarna">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdufHIkBJAvhgjOep2FDfvVUGITxnV2N-WtjUDKhuiWY_2VzQ/viewform?usp=header" target="_blank">Data Obat &#x1F48A;</a>
+          </button>
+          <button class="buttonPasien buttonWarna">
+            <a href="https://forms.gle/M9rUZiT2XVP2PSkW9" target="_blank">Data Pasien &#x1F464;</a>
+          </button>
+        </div>
+      </section>
+      <section id="about">
+        <h1>
+          Apasih manfaat <span>Adz<span>Health</span></span>
+        </h1>
+        <div class="timeline">
+          <div class="container left">
+            <div class="content">
+              <h2>Untuk Walsan</h2>
+              <p>
+                Salah satu alasan hadirnya Website ini bertujuan untuk
+                mempermudah Wali Santri dalam membuat surat perizinan agar lebih
+                mudah dibaca dan dipahami.
+              </p>
+              <br />
+              <button>
+                <a href="./html/perizinan.html">Buat Perizinan &#x1F517;</a>
+              </button>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content untukPetugas">
+              <h2>Untuk Petugas Kesehatan</h2>
+              <p class="pPetugas1">
+                Dan juga manfaat hadirnya website ini bagi Petugas Kesehatan
+                adalah untuk mempermudah Petugas Kesehatan dalam mendata nama2
+                pasien dan mendata nama2 obat yang dibutuhkan pasien. agar lebih
+                mudah dibaca dan lebih tertata.
+              </p>
+              <p class="pPetugas2">
+                hadirnya website ini memudahkan P.Kesehatan mendata pasien dan
+                mendata obat yang dibutuhkan pasien.
+              </p>
+              <br />
+              <div class="buttonBawah">
+                <button class="buttonObat buttonWarna">
+                  <a href="./html/dataObat.html"><span>Data</span> Obat &#x1F48A;</a>
+                </button>
+                <button class="buttonPasien buttonWarna">
+                  <a href="https://forms.gle/M9rUZiT2XVP2PSkW9"><span>Data</span> Pasien &#x1F464;</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials">
+        <h1>Testimoni</h1>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <img
+              src="./assets/foto/testimoni/Screenshot 2025-05-12 134644.png"
+              alt="Testimonial 1"
+            />
+            <p>
+              "Website ini sangat berguna bagi saya dalam membuat surat
+              perizinan sakit anak saya."
+            </p>
+          </div>
+          <div class="testimonial">
+            <img
+              src="./assets/foto/testimoni/Screenshot 2025-05-12 134655.png"
+              alt="Testimonial 2"
+            />
+            <p>
+              "Website ini sangat membantu saya dalam mendata nama2 pasien dan
+              nama2 obat yang dibutuhkan pasien."
+            </p>
+          </div>
+          <div class="testimonial">
+            <img
+              src="./assets/foto/testimoni/Screenshot 2025-05-19 103443.png"
+              alt="Testimonial 3"
+            />
+            <p>
+              "saya bersyukur dengan adanya Website ini karna sangat membantu
+              saya dalam mendata nama2 pasien dan nama2 obat yang dibutuhkan
+              pasien."
+            </p>
+          </div>
+          <div class="testimonial">
+            <img
+              src="./assets/foto/testimoni/Screenshot 2025-05-12 134713.png"
+              alt="Testimonial 4"
+            />
+            <p>
+              "Website ini sangat membantu saya dalam perizinan anak saya yang
+              sedang sakit di pondok."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 UksAdz. All rights reserved.</p>
+        <p>Created by AdzHealth</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a href="https://youtube.com/@yayasanabudzar" target="_blank"
+            ><i class="fa fa-youtube"></i
+          ></a>
+        </div>
+        <button id="mode-toggle">🌙 Dark Mode</button>
+        <button onclick="scrollToTop()" class="scroll-btn">
+          🔼 Kembali ke Atas
+        </button>
+      </footer>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
