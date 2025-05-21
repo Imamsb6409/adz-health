@@ -229,6 +229,7 @@ body main #about .left {
 }
 body main #about .right {
   left: 50%;
+  z-index: 1;
 }
 body main #about .left::before {
   content: " ";

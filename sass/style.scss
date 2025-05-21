@@ -247,6 +247,7 @@ body {
       /* Place the container to the right */
       .right {
         left: 50%;
+        z-index: 1;
       }
 
       /* Add arrows to the left container (pointing right) */
@@ -375,6 +376,7 @@ body {
     #testimonials {
       width: 100%;
       h1 {
+     
         text-align: center;
         font-size: 50px;
         padding: 10px;
