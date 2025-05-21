@@ -89,7 +89,7 @@ body header .topnav .icon {
 body main #home {
   height: 100vh;
   width: 100%;
-  background-color: #84a5dc;
+  background-color: #007bff;
   background-image: url("../assets/foto/medicare2.webp");
   background-size: cover;
   background-position: center;
@@ -189,7 +189,6 @@ body main #about .timeline {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10em;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -204,6 +203,7 @@ body main #about .timeline::after {
   margin-left: -3px;
 }
 body main #about .container {
+  margin: 7px 0;
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
