@@ -101,27 +101,40 @@ body {
     .cardObat {
       background-color: #ddd;
       display: flex;
-flex-direction: column;
+      flex-direction: column;
       column-gap: 1em;
       width: 100%;
       margin-bottom: 10px;
       padding: 10px;
       border-bottom: 2px solid #ccc;
       border-radius: 5px;
-       .atasObat{
+      .atasObat {
         display: flex;
         column-gap: 1em;
+        .isiObat {
+          display: flex;
+          flex-direction: column;
+          h1 {
+            font-size: 2em;
+          }
+          h2 {
+            font-size: 2em;
+          }
+          p {
+            font-size: 1.5em;
+          }
+        }
         img {
-        width: 30%;
+          width: 20%;
+        }
       }
-      }
-      .bawahObat{
+      .bawahObat {
         display: flex;
         flex-direction: column;
         column-gap: 1em;
       }
     }
-    @media screen and (min-width: 600px) {
+    @media screen and (max-width: 600px) {
       .cardObat {
         display: flex;
         column-gap: 1em;
@@ -131,11 +144,23 @@ flex-direction: column;
         border-bottom: 2px solid #ccc;
         border-radius: 5px;
         /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        .atasObat{
+          .isiObat{
+          h1,
+          h2 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+        }
+        h1,
         h2 {
-          font-size: 2em;
+          font-size: 20px;
         }
         p {
-          font-size: 1.5em;
+          font-size: 16px;
         }
         img {
           width: 30%;

@@ -23,7 +23,7 @@ body header {
 }
 body header #logo {
   background-color: white;
-  padding: 10px;
+  padding: 0 1em;
 }
 body header #logo img {
   width: 50px;
@@ -374,6 +374,7 @@ body main #testimonials h1 {
   background: #010066;
 }
 body main #testimonials .testimonials-container {
+  padding: 5em 2em;
   background: #010066;
   display: grid;
   grid-template-columns: auto auto;
@@ -389,25 +390,57 @@ body main #testimonials .testimonials-container .testimonial {
   background-color: #f5f5f5;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
   display: flex;
-  align-items: center;
   margin-bottom: 10px;
 }
-body main #testimonials .testimonials-container .testimonial img {
+body main #testimonials .testimonials-container .testimonial .atasTestimonial {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+body main #testimonials .testimonials-container .testimonial .atasTestimonial img {
   border: 1px solid #1e1e1e;
   background-size: cover;
   background-position: center;
   border-image-slice: fill;
-  width: 100px;
-  height: 100px;
+  width: 50px;
   border-radius: 100%;
   margin-right: 10px;
 }
-body main #testimonials .testimonials-container .testimonial h3 {
-  margin: 0;
+body main #testimonials .testimonials-container .testimonial .bawahTestimonial {
+  margin-top: 7px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
-body main #testimonials .testimonials-container .testimonial p {
-  margin: 0;
+body main #testimonials .testimonials-container .testimonial .bawahTestimonial .gray {
+  color: #808080;
+}
+body #maps {
+  position: relative;
+}
+body #maps h1 {
+  top: -0.5em;
+  right: 50%;
+  translate: 50% 0;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+  background: #010066;
+  position: absolute;
+  border: 3px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 600px) {
+  body #maps h1 {
+    display: none;
+    font-size: 30px;
+  }
 }
 body footer {
   background-color: #333;
