@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   margin: 0;
@@ -8,24 +7,26 @@
 }
 
 body header {
-  z-index: 99;
   display: flex;
   position: fixed;
+  z-index: 2;
   width: 100%;
   top: 0;
+  align-items: center;
   justify-content: space-between;
-  padding: 0px 0px 0px 20px;
   /* From https://css.glass */
-  background: rgba(73, 73, 73, 0.22);
-  border-radius: 0 0 0 0;
+  background: #010066;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
   border: 1px solid rgba(73, 73, 73, 0.3);
 }
 body header #logo {
-  display: flex;
-  align-self: center;
+  background-color: white;
+  padding: 10px;
+}
+body header #logo img {
+  width: 50px;
 }
 body header #logo h1 {
   margin: 4px 0px;
@@ -89,8 +90,8 @@ body header .topnav .icon {
 body main #home {
   height: 100vh;
   width: 100%;
-  background-color: #007bff;
-  background-image: url("../assets/foto/medicare2.webp");
+  background-color: white;
+  background-image: linear-gradient(rgba(209, 206, 206, 0.25), rgba(198, 198, 198, 0.75)), url("../assets/foto/medicare2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,13 +100,31 @@ body main #home {
   justify-content: flex-start;
   align-items: center;
 }
-body main #home img {
-  width: 50vw;
+body main #home .overlayLogo {
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-body main #home h1 {
-  text-align: center;
+body main #home .overlayLogo img {
+  width: 300px;
+}
+body main #home .overlayLogo h1 {
+  position: relative;
+  top: -55px;
   font-size: 70px;
-  color: #8492b2;
+  color: #010066;
+}
+body main #home .overlayLogo h1 span {
+  color: #669834;
+}
+body main #home .overlayLogo p {
+  position: relative;
+  top: -55px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #010066;
 }
 body main #home .button {
   display: grid;
@@ -142,10 +161,16 @@ body main #home .button .buttonWarna:hover a {
 }
 @media screen and (max-width: 600px) {
   body main #home {
-    justify-content: center;
+    justify-content: flex-start;
   }
-  body main #home img {
-    width: 100vw;
+  body main #home .overlayLogo img {
+    width: 200px;
+  }
+  body main #home .overlayLogo h1 {
+    font-size: 40px;
+  }
+  body main #home .overlayLogo p {
+    font-size: 20px;
   }
 }
 body main #about {
@@ -171,19 +196,18 @@ body main #about {
   /* Media queries - Responsive timeline on screens less than 600px wide */
 }
 body main #about h1 {
-  background: linear-gradient(90deg, hsl(232, 41%, 93%) 0%, hsl(198, 35%, 56%) 0%, hsl(195, 62%, 90%) 47%, hsl(198, 35%, 56%) 100%);
   padding: 1em;
-  background-color: #8492b2;
+  background-color: #669834;
   text-align: center;
   font-size: 40px;
-  color: #373d4d;
+  color: #fff;
   z-index: 1;
 }
 body main #about h1 span {
   color: #010066;
 }
 body main #about h1 span span {
-  color: #669834;
+  color: #010066;
 }
 body main #about .timeline {
   display: flex;
@@ -196,7 +220,7 @@ body main #about .timeline::after {
   content: "";
   position: absolute;
   width: 6px;
-  background-color: #8492b2;
+  background-color: #669834;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -344,15 +368,20 @@ body main #testimonials {
 }
 body main #testimonials h1 {
   text-align: center;
+  color: white;
   font-size: 50px;
   padding: 10px;
-  background: linear-gradient(90deg, hsl(232, 41%, 93%) 0%, hsl(198, 35%, 56%) 0%, hsl(195, 62%, 90%) 47%, hsl(198, 35%, 56%) 100%);
+  background: #010066;
 }
 body main #testimonials .testimonials-container {
-  background-size: cover;
-  background-image: url("../assets/foto/Cold’s_Fury_08_2560x1440.png");
+  background: #010066;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: auto auto;
+}
+@media screen and (max-width: 600px) {
+  body main #testimonials .testimonials-container {
+    grid-template-columns: auto;
+  }
 }
 body main #testimonials .testimonials-container .testimonial {
   margin: 20px;
@@ -365,10 +394,13 @@ body main #testimonials .testimonials-container .testimonial {
   margin-bottom: 10px;
 }
 body main #testimonials .testimonials-container .testimonial img {
+  border: 1px solid #1e1e1e;
+  background-size: cover;
+  background-position: center;
   border-image-slice: fill;
-  width: 200px;
+  width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 100%;
   margin-right: 10px;
 }
 body main #testimonials .testimonials-container .testimonial h3 {
