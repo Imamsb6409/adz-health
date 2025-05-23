@@ -99,6 +99,7 @@ body {
       background-image: url(../assets/foto/Remnant_of_Cold_04_1920x1080.png);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -109,9 +110,9 @@ body {
 
         background: linear-gradient(
           180deg,
-          hsla(241, 100%, 20%, 1) 0%,
-          hsla(237, 80%, 21%, 1) 32%,
-          hsla(90, 49%, 40%, 1) 100%
+          hsla(251, 100%, 20%, 1) 0%,
+          hsla(249, 80%, 21%, 1) 32%,
+          hsla(120, 49%, 40%, 1) 100%
         );
         background-clip: text;
         color: transparent;
