@@ -4,9 +4,9 @@ main{
   width: 100vw;
   height: 100vh;
    padding: 1em;
-  background-image: url(../assets/foto/Jungle_Expanse_02_2560x1440.png);
+  background-image: url(../assets/foto/v870-tang-35.jpg);
   background-size: cover;
-  background-position: 20%;
+  background-position: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,12 +14,12 @@ main{
   h1{
     text-align: center;
     font-size: 70px;
-    color: aliceblue;
+    
   }
   p{
     text-align: center;
     font-size: 30px;
-    color: white;
+ 
   }
   @media screen and (max-width: 600px) {
     display: flex;

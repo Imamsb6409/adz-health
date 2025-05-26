@@ -168,11 +168,21 @@ body {
             }
           }
         }
+
         .buttonPasien {
+          position: relative;
           border: 3px solid #010066;
           background: none;
           a {
             color: #010066;
+          }
+          .tooltip {
+            display: none;
+            padding: 10px;
+            background-color: #ccc;
+            position: absolute;
+            margin-top: -5em;
+            right: -11em;
           }
           &:hover {
             background-color: #010066;
@@ -505,11 +515,47 @@ body {
         }
       }
     }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+      .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+      }
+      &:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
   #maps {
     position: relative;
-    padding: 0 3em;
+    padding: 0 40px;
     background-color: #010066;
+    width: 100%;
     h1 {
       top: -0.7em;
       right: 50%;
@@ -523,7 +569,11 @@ body {
       border: 3px solid #eee;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      
     }
+h1.mobile{
+  display: none;
+}
     iframe {
       border: 3px solid #eee;
       border-radius: 10px 10px 0 0;
@@ -535,10 +585,25 @@ body {
         width: 100%;
       }
 
-      h1 {
+      h1.dekstop {
         display: none;
         font-size: 30px;
       }
+      h1.mobile {
+        display: block;
+        top: -60px;
+      right: 23%;
+      translate: 50% 0;
+        
+      }
+    }
+    @media screen and (max-width: 400px) {
+      h1.mobile {
+        margin-top: 30px;
+        right: 20%;
+        font-size: 30px;
+      }
+      
     }
   }
   footer {
