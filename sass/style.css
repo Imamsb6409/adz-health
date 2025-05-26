@@ -548,13 +548,13 @@ body #maps iframe {
   }
   body #maps h1.dekstop {
     display: none;
-    font-size: 30px;
   }
   body #maps h1.mobile {
     display: block;
     top: -60px;
     right: 23%;
     translate: 50% 0;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 400px) {
