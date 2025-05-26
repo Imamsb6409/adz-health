@@ -30,6 +30,7 @@ body {
         .isiObat {
           display: flex;
           flex-direction: column;
+
           h1 {
             font-size: 2em;
           }
@@ -42,6 +43,8 @@ body {
         }
         img {
           width: 20%;
+          object-fit: contain;
+          /* object-position: center; */
         }
       }
       .bawahObat {
@@ -61,6 +64,10 @@ body {
         border-radius: 5px;
         /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
         .atasObat{
+          flex-direction: column;
+          img{
+            width: 100%;
+          }
           .isiObat{
           h1,
           h2 {
