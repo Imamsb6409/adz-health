@@ -19,13 +19,10 @@ body {
     background: #010066;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
-    border: 1px solid rgba(73, 73, 73, 0.3);
     #logo {
       background-color: white;
       padding: 0 1em;
-      img {
-        width: 50px;
-      }
+      border: none;
       h1 {
         margin: 4px 0px;
         color: #010066;
@@ -148,7 +145,7 @@ body {
         }
         button {
           padding: 1em 2em;
-        
+
           border: none;
           border-radius: 50px;
           a {
@@ -520,7 +517,7 @@ body {
       text-align: center;
       color: white;
       font-size: 50px;
-      padding: 10px;
+      padding: 10px 20px;
       background: #669834;
       position: absolute;
       border: 3px solid #eee;
