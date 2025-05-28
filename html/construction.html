@@ -1,22 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Construction</title>
-    <link rel="stylesheet" href="../sass/style.css">
+    <link rel="stylesheet" href="../sass/style.css" />
     <style>
-        main{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+        background-image: linear-gradient(
+            rgba(209, 206, 206, 0.25),
+            rgba(198, 198, 198, 0.85)
+          ),
+          url(../assets/foto/glasses-stethoscope-near-notebook.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        gap: 32px;
+        h1 {
+          text-align: center;
+          font-size: 70px;
+          background: linear-gradient(
+            180deg,
+            hsla(251, 100%, 20%, 1) 0%,
+            hsla(249, 80%, 21%, 1) 32%,
+            hsla(120, 49%, 40%, 1) 100%
+          );
+          background-clip: text;
+          color: transparent;
         }
+        button {
+          padding: 15px 60px;
+          background: none;
+
+          border-radius: 35px;
+
+          border: 3px solid #010066;
+          a {
+            display: flex;
+            gap: 1em;
+            align-items: center;
+
+            text-decoration: none;
+            color: #010066;
+            font-size: 22px;
+            font-weight: 500;
+          }
+          &:hover {
+            background-color: #010066;
+            a {
+              color: white;
+            }
+          }
+        }
+        @media screen and (max-width: 800px) {
+          background-position: 70%;
+          h1 {
+            font-size: 50px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          background-position: 80%;
+          h1 {
+            font-size: 50px;
+          }
+        }
+        @media screen and (max-width: 320px) {
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-       <div id="logo">
+      <div id="logo">
         <h1>Adz<span>Health</span></h1>
       </div>
       <nav class="topnav" id="myTopnav">
@@ -24,13 +88,35 @@
           <i class="fa fa-bars"></i>
         </a>
         <a href="../index.html">Home</a>
-        <a href="dataObat.html" class="active">Data Obat</a>
+        <a href="dataObat.html">Data Obat</a>
         <a href="perizinan.html">Perizinan</a>
         <a href="help.html">Help</a>
       </nav>
     </header>
     <main>
-        <h1>Under Construction</h1>
+      <h1>Under Construction</h1>
+      <button id="back">
+        <a href="../index.html">&#9664; <span>Go Back</span></a>
+      </button>
     </main>
-</body>
+    <footer>
+      <p>&copy; 2025 AdzHealth. All rights reserved.</p>
+      <p>Created by AdzHealth</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a href="https://youtube.com/@yayasanabudzar" target="_blank"
+          ><i class="fa fa-youtube"></i
+        ></a>
+      </div>
+      <button onclick="scrollToTop()" class="scroll-btn">
+        🔼 Kembali ke Atas
+      </button>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
 </html>
